@@ -1,0 +1,181 @@
+@import './styles/_base';
+// Global styles
+* {
+    box-sizing: border-box;
+    color: $orange;
+    font-size: 62.5%;
+    margin: 0;
+}
+
+body {
+    background-color: $dark;
+    background-image: radial-gradient($blue, rgba(255, 255, 255, .2) 2px, transparent 40px), radial-gradient($blue, rgba(255, 255, 255, .15) 1px, transparent 30px), radial-gradient($blue, rgba(255, 255, 255, .1) 2px, transparent 40px), radial-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .1) 2px, transparent 30px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+h1 {
+    color: $purple;
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    color: $blue;
+    font-size: 2.7rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+}
+
+h4 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+h5 {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+
+h6,
+p {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.pageContainer {
+    box-sizing: border-box;
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    padding: 2rem;
+}
+
+.row {
+    margin: 0;
+}
+
+// Buttons and icons
+.confirmButton,
+.listButton {
+    border: .1rem solid $dark;
+    border-radius: .5rem;
+    color: $dark;
+    font-size: 1.6rem;
+    margin: .5rem;
+    padding: .5rem;
+}
+
+.confirmButton {
+    background-color: $orange;
+    &:hover {
+        background-color: darken($orange, 10%);
+    }
+}
+
+.listButton {
+    background-color: $blue;
+    & p {
+        color: $dark;
+    }
+    &:hover {
+        background-color: darken($blue, 10%);
+    }
+    &:disabled {
+        cursor: not-allowed;
+        background-color: darken($blue, 20%);
+    }
+}
+
+.cancelButton {
+    background-color: $purple;
+    border-radius: .5rem;
+    color: $dark;
+    font-size: 1.6rem;
+    margin: .5rem;
+    padding: .5rem;
+    &:hover {
+        background-color: darken($purple, 10%);
+    }
+}
+
+.far {
+    font-size: 3.5rem;
+}
+
+.fa-caret-up {
+    color: $dark;
+    font-size: 1.6rem;
+}
+
+.fa-spinner {
+    color: $dark;
+    font-size: 2rem;
+}
+
+// List of animals in dropdown
+.dropdown-menu .fas,
+.passwordContainer .fas {
+    background-color: $dark;
+    border: .1rem solid $blue;
+    border-radius: .5rem;
+    font-size: 5rem;
+    margin: .9rem;
+    padding: 1rem;
+    @media screen and (max-width: 991px) {}
+    &:hover {
+        opacity: .9;
+    }
+}
+
+.dropdown-menu .fas {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    background-color: $dark;
+    border: .1rem solid $blue;
+    width: 125%;
+    @media screen and (max-width: 991px) {
+        width: 35rem;
+    }
+}
+
+div[aria-labelledby="dropdownMenuButton1"] {
+    transform: translate(-4rem, -6.5rem) !important;
+    @media screen and (max-width: 991px) {
+        transform: translate(-2.5rem, -6.5rem) !important;
+    }
+}
+
+// SweetAlert modal
+.swal2-center>.swal2-popup {
+    padding: 1rem;
+    border: .1rem solid $blue;
+}
+
+.swal2-popup .swal2-input {
+    color: $orange;
+    font-size: 1.8rem;
+    margin: 1.2rem 1rem;
+    border-color: $blue;
+}
+
+// Animations
+.fadeIn {
+    animation: fadein 1s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

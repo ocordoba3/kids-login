@@ -1,0 +1,6 @@
+<div class="row d-flex justify-content-center">
+    <!-- LISTA DEICONOS A MOSTRAR -->
+    <div class='col-auto' (click)="itemSelected(item)" *ngFor="let item of icons">
+        <span [ngStyle]="{'color': item.color}" class='{{item.icon}}'></span>
+    </div>
+</div>
